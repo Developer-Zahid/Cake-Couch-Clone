@@ -64,32 +64,33 @@ body{
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%) skew(-10deg) rotate(0);
-                    width: 50em;
-                    height: 50em;
-                    background-color: #ab6bfe;
+                    transform: translate(-50%, -50%) skewY(-10deg)  rotate(0);
+                    width: 100%;
+                    height: 100%;
                     z-index: -1;
                     border-radius: 20%;
                 }
             }
-            &.slick-active{
-                .banner__shape__slide__item__bg{
-                    animation: rotate 0.5s linear;
-                    @keyframes rotate {
-                        to{
-                            transform: translate(-50%, -50%) skew(-10deg) rotate(90deg);
-                        }
-                    }
-                }
-            }
+            
         }
     }
     &__slide{
         &__item{
             padding: 16em;
+            // background-color: #ab6bfe;
             &__title{
                 color: $color-white;
                 font-size: 8em;
+            }
+        }
+        &.slick-active{
+            .banner__shape__slide__item__bg{
+                animation: rotate 0.5s linear forwards;
+                @keyframes rotate {
+                    to{
+                        transform: translate(-50%, -50%) skewY(-10deg) rotate(90deg);
+                    }
+                }
             }
         }
     }
