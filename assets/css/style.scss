@@ -28,6 +28,7 @@ html{
 body{
     font-family: $font-primary;
     height: 100%;
+    overflow: hidden;
 }
 
 [class*="material"]{
@@ -50,28 +51,30 @@ body{
     &__shape{
         &-slider{
             position: absolute;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        &__slide{
-            width: inherit;
-            height: inherit;
-            &__item{
-                width: inherit;
-                height: inherit;
-                position: relative;
-                &__bg{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) skewY(-10deg)  rotate(0);
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                    border-radius: 20%;
-                }
+        &-slide{
+            position: absolute;
+            transform: rotate(0);
+            transform-origin: center;
+            transition: all 0.8s ease-in-out;
+            opacity: 0;
+            &.active{
+                opacity: 1;
             }
-            
+            &__item{
+                font-size: 75em;
+            }
+            // @keyframes rounded {
+            //     to{
+            //         transform: rotate(90deg);
+            //     }
+            // }
         }
     }
     &__slide{
@@ -94,4 +97,10 @@ body{
             }
         }
     }
+}
+
+.gradient-wrapper{
+    position: fixed;
+    top: -100%;
+    left: -100%;
 }

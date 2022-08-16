@@ -10,26 +10,23 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-
-    <!-- <div class="banner__shape__slide__item__bg" style="background-image: linear-gradient(120deg,#b06cfd, #815ce4);"></div>
-    <div class="banner__shape__slide__item__bg" style="background-image: linear-gradient(120deg,#fee36d, #f4a757);"></div>
-    <div class="banner__shape__slide__item__bg" style="background-image: linear-gradient(120deg,#5af1d9, #52dfc7);"></div> -->
+    <div class="gradient-wrapper"></div>
     <section class="banner">
         <div class="banner__half">
             <div class="banner__shape-slider">
             </div>
             <div class="banner__slider">
-                <div class="banner__slide" data-bg="linear-gradient(120deg,#b06cfd, #815ce4)">
+                <div class="banner__slide" data-gradient_1="#b06cfd" data-gradient_2="#815ce4">
                     <div class="banner__slide__item">
                         <h1 class="banner__slide__item__title">Sofa Cake</h1>
                     </div>
                 </div>
-                <div class="banner__slide" data-bg="linear-gradient(120deg,#fee36d, #f4a757)">
+                <div class="banner__slide" data-gradient_1="#fee36d" data-gradient_2="#f4a757">
                     <div class="banner__slide__item">
                         <h1 class="banner__slide__item__title">Blob Sofa</h1>
                     </div>
                 </div>
-                <div class="banner__slide" data-bg="linear-gradient(120deg,#5af1d9, #52dfc7)">
+                <div class="banner__slide" data-gradient_1="#5af1d9" data-gradient_2="#52dfc7">
                     <div class="banner__slide__item">
                         <h1 class="banner__slide__item__title">Herb Pods</h1>
                     </div>
@@ -37,6 +34,21 @@
             </div>
         </div>
     </section>
+
+    <!--
+    <svg class="gradient-wrapper" width="0" height="0" viewBox="0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="gradient_1" x1="280.988" y1="1.86192" x2="629" y2="596" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#b06cfd"/>
+                <stop offset="1" stop-color="#815ce4"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg class="slider-shape" width="1em" height="1em" viewBox="0 0 648 644" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="url(#gradient_1)" d="M227.296 30.6147C256.367 -1.1097 303.542 -8.44647 340.875 12.9504L600.849 161.957C635.081 181.578 652.991 220.844 645.365 259.557L592.801 526.402C585.325 564.361 554.903 593.585 516.676 599.53L237.945 642.879C199.718 648.825 161.856 630.22 143.204 596.325L12.0841 358.047C-6.93851 323.478 -1.79993 280.628 24.8567 251.538L227.296 30.6147Z"/>
+    </svg>
+    -->
 
     <script src="./assets/plugins/jquery/jquery.min.js"></script>
     <script src="./assets/plugins/slick-slider/js/slick.js"></script>
